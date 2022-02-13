@@ -1,0 +1,62 @@
+AllCops:
+  NewCops: enable
+  DisplayCopNames: true
+  Exclude:
+    - "bin/*"
+    - "db/**/*"
+    - "node_modules/**/*"
+    - "coverage"
+    - "tmp"
+    - "vendor/bundle/**/*"
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/DoubleNegation:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Exclude:
+    - "config/routes.rb"
+
+Metrics/MethodLength:
+  Max: 15
+
+Metrics/BlockLength:
+  Max: 15
+  Exclude:
+    - "config/routes.rb"
+    - "**/*_schema.rb"
+    - "test/**/*"
+    - "Vagrantfile"
+    - "config/environments/*"
+    - "**/*.rake"
+
+Metrics/ClassLength:
+  Max: 300
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
+
+Style/StringLiterals:
+  Exclude:
+    - "bin/**/*"
+    - "db/migrations"
+
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/LineLength:
+  Max: 150

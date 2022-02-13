@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 source 'https://rubygems.org'
 git_source(:github) { "https://github.com/#{_1}.git" }
 ruby '3.1.0'
