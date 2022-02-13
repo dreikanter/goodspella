@@ -1,0 +1,14 @@
+version: "3.8"
+
+volumes:
+  bundle:
+
+services:
+  console:
+    build: .
+    environment:
+      BUNDLE_PATH: /bundle
+    command: bash -c "bundle exec irb"
+    volumes:
+      - .:/app
+      - bundle:/bundle
