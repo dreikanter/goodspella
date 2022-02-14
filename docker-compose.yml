@@ -12,3 +12,14 @@ services:
     volumes:
       - .:/app
       - bundle:/bundle
+
+  app:
+    build: .
+    environment:
+      BUNDLE_PATH: /bundle
+    command: bash -c "bundle exec rails s -b 0.0.0.0"
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/app
+      - bundle:/bundle

@@ -30,7 +30,7 @@ Metrics/BlockLength:
   Exclude:
     - "config/routes.rb"
     - "**/*_schema.rb"
-    - "test/**/*"
+    - "spec/**/*"
     - "Vagrantfile"
     - "config/environments/*"
     - "**/*.rake"
@@ -60,3 +60,6 @@ Layout/FirstHashElementIndentation:
 
 Layout/LineLength:
   Max: 150
+
+Style/WordArray:
+  Enabled: false

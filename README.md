@@ -1,24 +1,60 @@
-# README
+# Experimental spelling web-service
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Set up and run the server:
 
-Things you may want to cover:
+```bash
+docker-compose build
+docker-compose up app
+```
 
-* Ruby version
+Run tests:
 
-* System dependencies
+```bash
+docker-compose run console bash
+bundle exec rspec
+```
 
-* Configuration
+Request example:
 
-* Database creation
+```bash
+curl -s -X POST "http://localhost:3000/suggestions" -H 'Content-Type: application/json' -d '{"text": "helo wrld"}' | python -m json.tool
+```
 
-* Database initialization
+Response:
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```json
+{
+  "suggestions":
+  [
+    {
+      "offset": 0,
+      "suggestions":
+      [
+        "hole",
+        "help",
+        "helot",
+        "hello",
+        "halo",
+        "hero",
+        "hell",
+        "held",
+        "helm",
+        "he lo",
+        "he-lo"
+      ],
+      "word": "helo"
+    },
+    {
+      "offset": 5,
+      "suggestions":
+      [
+        "weld",
+        "world",
+        "wild",
+        "wold"
+      ],
+      "word": "wrld"
+    }
+  ]
+}
+```

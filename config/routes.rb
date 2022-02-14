@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  resources :spell_checks, only: :index
+  resources :suggestions, only: :create
 end
