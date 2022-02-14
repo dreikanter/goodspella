@@ -56,4 +56,16 @@ describe SpellChecker do
 
     it { expect(suggestions).to eq(expected) }
   end
+
+  context 'with larger English text sample' do
+    let(:text) { file_fixture('samples/english.txt').read }
+
+    it { expect(suggestions).to be_a(Array) }
+  end
+
+  context 'with larger Latin text sample' do
+    let(:text) { file_fixture('samples/latin.txt').read }
+
+    it { expect(suggestions).to be_a(Array) }
+  end
 end
