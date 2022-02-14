@@ -58,3 +58,11 @@ Response:
   ]
 }
 ```
+
+## Potential improvements
+
+- Custom dictionary extensions.
+- Skip inline URLs.
+- Support Markdown link syntax (skip URLs inside links).
+- Skip acronyms.
+- Cache suggestions for performance improvement.
