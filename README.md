@@ -27,6 +27,7 @@ Response:
   "suggestions":
   [
     {
+      "word": "helo",
       "offset": 0,
       "suggestions":
       [
@@ -41,10 +42,10 @@ Response:
         "helm",
         "he lo",
         "he-lo"
-      ],
-      "word": "helo"
+      ]
     },
     {
+      "word": "wrld",
       "offset": 5,
       "suggestions":
       [
@@ -52,8 +53,7 @@ Response:
         "world",
         "wild",
         "wold"
-      ],
-      "word": "wrld"
+      ]
     }
   ]
 }
